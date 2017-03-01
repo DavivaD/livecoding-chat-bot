@@ -111,6 +111,14 @@ function processMessage() {
                 postMessage('@' + userName + ', the time is: ' + (new Date()).toLocaleTimeString());
             break;
 
+            case '!colobot':
+                postMessage('	Please visit http://colobot.info for newest informations, @' + userName + '!');
+            break;
+
+            case '!github':
+                postMessage('Link - http://github.com/colobot/colobot - Thank you for your help on development of this game @' + userName + '!');
+            break;
+
             case '!leaderboard':
                 var s = "No one answered correctly yet!";
                 var max = -1;
