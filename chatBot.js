@@ -71,7 +71,7 @@ function processMessage() {
         // Someone entered the room
         if(text.indexOf(' joined the room.') != -1) {
             var userJoined = text.slice(0, text.indexOf(' joined the room.'));
-            postMessage("Hello " + userJoined + " welcome to my stream!");
+            postMessage("Hello " + userJoined + " ! Command List is on !help command!");
         }     
     } else {
         // var userName = $('a', message).text(); <- That includes all links in a message.
@@ -104,7 +104,7 @@ function processMessage() {
                 if(isAdmin(userName)) {
                     availableCommands = availableCommands.concat(getAdminCommands());
                 }
-                postMessage('Available commands are : ' + availableCommands.join(', '));
+                postMessage('Commandlist: ' + availableCommands.join(', '));
             break;
 
             case '!time':
@@ -116,7 +116,7 @@ function processMessage() {
             break;
 
             case '!github':
-                postMessage('Link - http://github.com/colobot/colobot - Thank you for your help on development of this game @' + userName + '!');
+                postMessage('URL - http://github.com/colobot/colobot - Thank you for your help on development of this game @' + userName + '!');
             break;
 
             case '!leaderboard':
