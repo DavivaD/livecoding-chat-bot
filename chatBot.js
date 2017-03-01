@@ -104,7 +104,7 @@ function processMessage() {
                 if(isAdmin(userName)) {
                     availableCommands = availableCommands.concat(getAdminCommands());
                 }
-                postMessage('Commandlist: ' + availableCommands.join(', '));
+                postMessage('Commandlist: ' + availableCommands.join(', ') + ', !colobot, !github');
             break;
 
             case '!time':
